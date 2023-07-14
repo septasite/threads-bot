@@ -5,7 +5,7 @@ require('dotenv').config()
 const main = async () => {
   try {
     const randomQuote = await axios.get('https://api.quotable.io/random')
-    const { content } = randomQuote.data
+    const { content: quote } = randomQuote.data
 
     const threadsAPI = new ThreadsAPI({
       username: process.env.USERNAME,
@@ -13,7 +13,7 @@ const main = async () => {
     })
 
     const posts = await threadsAPI.publish({
-      text: content,
+      text: quote,
     })
 
     console.log(posts)
