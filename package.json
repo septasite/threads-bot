@@ -1,0 +1,16 @@
+{
+  "name": "threads-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "auto-posts random quote threads.net by Instagram",
+  "author": "septasite",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "dotenv": "^16.3.1",
+    "threads-api": "^1.4.2"
+  }
+}
